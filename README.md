@@ -3,7 +3,7 @@ Installation: </br>
 2. Run 'npm install &lt;absolute path to ngx-button-0.0.1.tgz>' in your app directory terminal. </br>
 Example:  </br>
 ```
-npm install B:/Workspace/ngx-button-0.0.1.tgz
+npm install C:/Users/user/Downloads/ngx-button-0.0.1.tgz
 ```
 3. Import the component module into your app.module.ts file and feature modules. </br>
 ```
