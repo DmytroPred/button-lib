@@ -1,0 +1,24 @@
+.ngx-btn {
+    &-group {
+        display: flex;
+        flex-direction: row;
+
+        .ngx-btn {
+            border-radius: 0!important;
+            
+            &:focus {
+                outline: none!important;
+            }
+
+            &:first-child {
+                border-top-left-radius: 2px!important;
+                border-bottom-left-radius: 2px!important;
+            }
+
+            &:last-child {
+                border-top-right-radius: 2px!important;
+                border-bottom-right-radius: 2px!important;
+            }
+        }
+    }
+}
