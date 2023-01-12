@@ -22,11 +22,6 @@ describe('button', () => {
     }));
 
     it('should apply base ngx-btn class', () => {
-      console.log(buttonElements[0].nativeElement);
-      console.log(buttonElements[1].nativeElement);
-      console.log(buttonElements[2].nativeElement);
-      console.log(buttonElements[3].nativeElement);
-
       expect(buttonElements[0].nativeElement.className).toContain('ngx-btn');
       expect(buttonElements[1].nativeElement.className).toContain('ngx-btn');
       expect(buttonElements[2].nativeElement.className).toContain('ngx-btn');
