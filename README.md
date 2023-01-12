@@ -1,77 +1,89 @@
 
-download ngx-button folder in your application projects folder
-projects/ngx-button
+download ngx-button folder in your application projects folder </br>
+projects/ngx-button </br>
 
-Usage
-Import the component modules you want to use into your app.module.ts file and feature modules.
+Usage </br>
+Import the component modules you want to use into your app.module.ts file and feature modules. </br>
 
-import { NgxButtonModule } from 'projects/ngx-button/src/lib/ngx-button.module';
+import { NgxButtonModule } from 'projects/ngx-button/src/lib/ngx-button.module'; </br>
 
-@NgModule({
-  imports: [ NgxButtonModule ]
-})
-export class AppModule { }
-
-
-define lib in angular.json in "projects" property:
-
-"ngx-button": {
-  "projectType": "library",
-  "root": "projects/ngx-button",
-  "sourceRoot": "projects/ngx-button/src",
-  "prefix": "lib",
-  "architect": {
-    "build": {
-      "builder": "@angular-devkit/build-angular:ng-packagr",
-      "options": {
-        "project": "projects/ngx-button/ng-package.json"
+@NgModule({ </br>
+  imports: [ NgxButtonModule ] </br>
+}) </br>
+export class AppModule { } </br>
+</br>
+</br>
+install "ng-packagr":</br>
+npm i ng-packagr</br>
+</br>
+define lib in angular.json in "projects" property: </br>
+</br>
+"ngx-button": { </br>
+  "projectType": "library", </br>
+  "root": "projects/ngx-button", </br>
+  "sourceRoot": "projects/ngx-button/src", </br>
+  "prefix": "lib", </br>
+  "architect": { </br>
+    "build": { </br>
+      "builder": "@angular-devkit/build-angular:ng-packagr",  </br>
+      "options": {  </br>
+        "project": "projects/ngx-button/ng-package.json" </br>
       },
       "configurations": {
         "production": {
           "tsConfig": "projects/ngx-button/tsconfig.lib.prod.json"
-        },
-        "development": {
-          "tsConfig": "projects/ngx-button/tsconfig.lib.json"
-        }
-      },
-      "defaultConfiguration": "production"
-    },
-    "test": {
-      "builder": "@angular-devkit/build-angular:karma",
-      "options": {
-        "main": "projects/ngx-button/src/test.ts",
-        "tsConfig": "projects/ngx-button/tsconfig.spec.json",
-        "karmaConfig": "projects/ngx-button/karma.conf.js"
-      }
-    }
-  }
-}
+        }, </br>
+        "development": { </br>
+          "tsConfig": "projects/ngx-button/tsconfig.lib.json" </br>
+        } </br>
+      }, </br>
+      "defaultConfiguration": "production" </br>
+    }, </br>
+    "test": { </br>
+      "builder": "@angular-devkit/build-angular:karma", </br>
+      "options": { </br>
+        "main": "projects/ngx-button/src/test.ts", </br>
+        "tsConfig": "projects/ngx-button/tsconfig.spec.json", </br>
+        "karmaConfig": "projects/ngx-button/karma.conf.js" </br>
+      } </br>
+    } </br>
+  } </br>
+} </br>
+ </br>
+ </br>
+ 
+define in app tsconfig.json file in "compilerOptions":
+"paths": { </br>
+   "ngx-button": [ </br>
+    "dist/ngx-button" </br>
+    ] </br>
+}, </br>
+ 
+ 
+API </br>
+[ngx-button] </br>
+Note：ngx-button is a Directive, it accepts all props which are supported by native button. </br>
 
+To get a customized button, just set ngxType/ngxSize/disabled. </br>
 
-API
-[ngx-button]
-Note：ngx-button is a Directive, it accepts all props which are supported by native button.
+Property	Description                                                     	Type	                            Default </br>
+[disabled]	prevents a user from interacting with the button	                'true'	                            false	 </br>
+ngxType	    can be set to primary dashed text link or omitted (meaning default)	'primary'|'dashed'|'secondary'	-	 </br>
 
-To get a customized button, just set ngxType/ngxSize/disabled.
+Example: </br>
+    <button ngx-button ngxType="destructive" [disabled]="true">button</button> </br>
 
-Property	Description                                                     	Type	                            Default
-[disabled]	prevents a user from interacting with the button	                'true'	                            false	
-ngxType	    can be set to primary dashed text link or omitted (meaning default)	'primary'|'dashed'|'secondary'	-	
-
-Example:
-    <button ngx-button ngxType="destructive" [disabled]="true">button</button>
-
-Example for button group: 
-    <ngx-button-group>
-        <button ngx-button ngxType="primary">button</button>
-        <button ngx-button ngxType="secondary" [disabled]="true"><p>&spades;</p><p>button</p></button>
-        <button ngx-button ngxType="destructive">button</button>
-    </ngx-button-group>
-
-# NgxButton
-
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
-
+Example for button group:  </br>
+    <ngx-button-group> </br>
+        <button ngx-button ngxType="primary">button</button> </br>
+        <button ngx-button ngxType="secondary" [disabled]="true"><p>&spades;</p><p>button</p></button> </br>
+        <button ngx-button ngxType="destructive">button</button> </br>
+    </ngx-button-group> </br>
+ </br>
+# NgxButton </br>
+ </br>
+This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0. </br>
+ </br>
 ## Code scaffolding
 
 Run `ng generate component component-name --project ngx-button` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-button`.
