@@ -1,11 +1,22 @@
-Usage </br>
-Import the component modules you want to use into your app.module.ts file and feature modules. </br>
+Installation: </br>
+1. Download ngx-button-0.0.1.tgz file from library-tgz folder. </br>
+2. Run 'npm install <absolute path to ngx-button-0.0.1.tgz>' in your app directory. </br>
+Example:  </br>
+```
+npm install B:/Workspace/ngx-button-0.0.1.tgz
+```
+3. Import the component module into your app.module.ts file and feature modules. </br>
+```
+@NgModule({
+  imports: [ NgxButtonModule ]
+})
+export class AppModule { }
+```
 
-@NgModule({ </br>
-  imports: [ NgxButtonModule ] </br>
-}) </br>
-export class AppModule { } </br>
-</br>
+@NgModule({
+  imports: [ NgxButtonModule ]
+})
+export class AppModule { }
  
 API </br>
 [ngx-button] </br>
