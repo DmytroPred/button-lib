@@ -5,62 +5,11 @@ projects/ngx-button </br>
 Usage </br>
 Import the component modules you want to use into your app.module.ts file and feature modules. </br>
 
-import { NgxButtonModule } from 'projects/ngx-button/src/public-api'; </br>
-
 @NgModule({ </br>
   imports: [ NgxButtonModule ] </br>
 }) </br>
 export class AppModule { } </br>
 </br>
-</br>
-install "ng-packagr":</br>
-npm i ng-packagr</br>
-</br>
-define lib in angular.json in "projects" property: </br>
-</br>
-```
-"ngx-button": {
-  "projectType": "library",
-  "root": "projects/ngx-button",
-  "sourceRoot": "projects/ngx-button/src",
-  "prefix": "lib",
-  "architect": {
-    "build": {
-      "builder": "@angular-devkit/build-angular:ng-packagr", 
-      "options": { 
-        "project": "projects/ngx-button/ng-package.json"
-      },
-      "configurations": {
-        "production": {
-          "tsConfig": "projects/ngx-button/tsconfig.lib.prod.json"
-        },
-        "development": {
-          "tsConfig": "projects/ngx-button/tsconfig.lib.json"
-        }
-      },
-      "defaultConfiguration": "production"
-    },
-    "test": {
-      "builder": "@angular-devkit/build-angular:karma",
-      "options": {
-        "main": "projects/ngx-button/src/test.ts",
-        "tsConfig": "projects/ngx-button/tsconfig.spec.json",
-        "karmaConfig": "projects/ngx-button/karma.conf.js"
-      }
-    }
-  }
-}
-```
- </br>
- 
-define in app tsconfig.json file in "compilerOptions":
-```
-"paths": {
-   "ngx-button": [
-    "dist/ngx-button"
-    ]
-},
-```
  
 API </br>
 [ngx-button] </br>
