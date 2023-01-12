@@ -5,7 +5,7 @@ projects/ngx-button </br>
 Usage </br>
 Import the component modules you want to use into your app.module.ts file and feature modules. </br>
 
-import { NgxButtonModule } from 'projects/ngx-button/src/lib/ngx-button.module'; </br>
+import { NgxButtonModule } from 'projects/ngx-button/src/public-api'; </br>
 
 @NgModule({ </br>
   imports: [ NgxButtonModule ] </br>
