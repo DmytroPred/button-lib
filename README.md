@@ -1,6 +1,6 @@
 Installation: </br>
 1. Download ngx-button-0.0.1.tgz file from library-tgz folder. </br>
-2. Run 'npm install &lt;absolute path to ngx-button-0.0.1.tgz>' in your app directory. </br>
+2. Run 'npm install &lt;absolute path to ngx-button-0.0.1.tgz>' in your app directory terminal. </br>
 Example:  </br>
 ```
 npm install B:/Workspace/ngx-button-0.0.1.tgz
