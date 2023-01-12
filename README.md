@@ -20,7 +20,7 @@ Note：ngx-button accepts all props which are supported by native button. </br>
 ```
 Property	  Description                                                     	Type	                            Default
 [disabled]	prevents a user from interacting with the button	                'true'	                            false	
-ngxType	      can be set to primary dashed text link or omitted (meaning default)	'primary'|'dashed'|'secondary'	  -	
+ngxType	      can be set to primary dashed text link or omitted (meaning default)	'primary'|'destructive'|'secondary' -	
 ```
 Example: </br>
 ```
