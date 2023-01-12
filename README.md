@@ -1,7 +1,3 @@
-
-download ngx-button folder in your application projects folder </br>
-projects/ngx-button </br>
-
 Usage </br>
 Import the component modules you want to use into your app.module.ts file and feature modules. </br>
 
